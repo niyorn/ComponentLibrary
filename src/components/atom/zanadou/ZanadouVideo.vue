@@ -44,6 +44,5 @@ export default {
 	height: 20rem;
 
 	transition: all 0.4s ease-in-out;
-	background: red;
 }
 </style>
