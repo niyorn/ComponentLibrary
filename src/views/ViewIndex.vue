@@ -9,9 +9,9 @@
 import Zanadou from '@/components/atom/zanadou/Zanadou.vue'
 
 export default {
-	name: 'home',
-	components: {
-		Zanadou
-	}
+    name: 'home',
+    components: {
+        Zanadou
+    }
 }
 </script>
