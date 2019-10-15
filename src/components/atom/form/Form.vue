@@ -2,7 +2,7 @@
     <section class="container-form">
         <form class="form">
             <label>
-                <span :class="{active: isActive}" class="label">Email</span>
+                <span :class="{ active: isActive }" class="label">Email</span>
                 <input v-model="email" class="input" type="email" />
             </label>
 
@@ -13,79 +13,79 @@
 
 <script>
 export default {
-	name: 'Form',
-	data() {
-		return {
-			email: ''
-		}
-	},
-	computed: {
-		isActive() {
-			if (this.email !== '') {
-				return true
-			} else {
-				return false
-			}
-		}
-	},
-	methods: {
-		clicked() {
-			this.$emit('click', this.email)
-		}
-	}
+    name: 'Form',
+    data() {
+        return {
+            email: ''
+        }
+    },
+    computed: {
+        isActive() {
+            if (this.email !== '') {
+                return true
+            } else {
+                return false
+            }
+        }
+    },
+    methods: {
+        clicked() {
+            this.$emit('click', this.email)
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 .container-form {
-	width: 20rem;
+    width: 20rem;
 }
 
 .form {
-	display: flex;
-	flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
-	label {
-		position: relative;
+    label {
+        position: relative;
 
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
-		justify-content: center;
-		align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
 
-		&:focus-within {
-			.label {
-				transform: translate(0);
-			}
-		}
-	}
+        &:focus-within {
+            .label {
+                transform: translate(0);
+            }
+        }
+    }
 }
 
 .label {
-	width: 100%;
-	transform: translate(1rem, 2.4rem);
-	transition: transform 0.1s ease-out;
-	pointer-events: none;
+    width: 100%;
+    transform: translate(1rem, 2.4rem);
+    transition: transform 0.1s ease-out;
+    pointer-events: none;
 
-	&.active {
-		transform: translate(0);
-	}
+    &.active {
+        transform: translate(0);
+    }
 }
 
 .input {
-	width: 100%;
-	margin-top: 0.4rem;
-	padding: 0.5rem 1rem;
+    width: 100%;
+    margin-top: 0.4rem;
+    padding: 0.5rem 1rem;
 
-	font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 
 .button {
-	margin-top: 1rem;
-	padding: 1rem;
-	background-color: black;
-	color: white;
-	border: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
 }
 </style>
